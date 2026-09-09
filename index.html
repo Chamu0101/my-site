@@ -20,12 +20,27 @@
 </head>
 <body>
   <h1>Chamu</h1>
-  <p class="sub">あなたのホームページ作成します</p>
+  <p class="sub">あなたのホームページを作成します</p>
 
   <h2>できること</h2>
   <p>ホームページの制作、公開後の更新、スマートフォン対応。</p>
 
   <h2>お問い合わせ</h2>
   <p>メール：ここにアドレス</p>
+  <button id="btn">押してみて</button>
+  <p id="msg">まだ押されていません</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const msg = document.getElementById('msg');
+
+    let count = 0;
+
+    btn.addEventListener('click',()=> {
+      count = count + 1;
+      console.log(count);
+      msg.textContent = count + '回押されました';
+    });
+  </script>
 </body>
 </html>
